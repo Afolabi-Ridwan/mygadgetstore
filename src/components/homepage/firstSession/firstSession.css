@@ -1,0 +1,113 @@
+.firstSession {
+  margin-top: 50px;
+  padding: 0 20px;
+}
+.firstSession img {
+  /* width: 30vw; */
+  width: 100%;
+  height: 350px;
+  background-color: rgb(240, 248, 255);
+}
+
+.firstSession .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.firstSession .container .products {
+  position: relative;
+}
+
+.firstSession .container .products .tag {
+  position: absolute;
+  top: 0;
+  width: 28vw;
+  height: 350px;
+  border-left: 0 solid rgb(43, 153, 109, 0.9);
+  border-right: 25vw solid transparent;
+  border-top: 350px solid rgb(43, 153, 109, 0.9);
+  border-bottom: 0;
+}
+
+.firstSession .container .products .tagInfo {
+  position: absolute;
+  top: 0;
+  color: white;
+  padding: 0 30px;
+  margin-top: 50px;
+  z-index: 900;
+}
+
+.firstSession .container .products .tagInfo p {
+  font-size: 40px;
+}
+
+.firstSession .container .products .tagInfo p span {
+  margin-top: 10px;
+  display: block;
+}
+
+.firstSession .container .products .tagInfo button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 818px) {
+  .firstSession .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .firstSession .container .products .tag {
+    width: 78vw;
+    height: 350px;
+    border-left: 0 solid rgb(43, 153, 109, 0.9);
+    border-right: 75vw solid transparent;
+    border-top: 450px solid rgb(43, 153, 109, 0.9);
+  }
+
+  .firstSession img {
+    width: 80vw;
+    height: 450px;
+  }
+
+  .firstSession .container .products .tagInfo p {
+    font-size: 45px;
+  }
+
+  .firstSession .container .products .tagInfo button {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .firstSession img {
+    width: 90vw;
+    height: 350px;
+  }
+
+  .firstSession .container .products .tagInfo {
+    margin-top: 20px;
+  }
+  .firstSession .container .products .tagInfo p {
+    font-size: 40px;
+  }
+
+  .firstSession .container .products .tagInfo button {
+    font-size: 20px;
+  }
+
+  .firstSession .container .products .tag {
+    width: 88vw;
+    height: 250px;
+    border-left: 0 solid rgb(43, 153, 109, 0.9);
+    border-right: 85vw solid transparent;
+    border-top: 350px solid rgb(43, 153, 109, 0.9);
+  }
+}

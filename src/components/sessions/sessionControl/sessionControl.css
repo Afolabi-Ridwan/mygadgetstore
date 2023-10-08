@@ -1,0 +1,111 @@
+.sessionControl {
+  padding: 20px 10px;
+}
+
+.sessionControl .header {
+  font-size: 35px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.sessionControl .container .eachTab .infoOne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sessionControl .container .infoOne img {
+  width: 80%;
+  height: 300px;
+  object-fit: contain;
+  transition: ease 0.5s;
+  margin-bottom: 50px;
+}
+
+.sessionControl .container .infoOne img:hover {
+  width: 85%;
+  height: 310px;
+}
+
+.sessionControl .container .eachTab .infoTwo {
+  position: absolute;
+  margin-top: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sessionControl .container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.sessionControl .container .eachTab {
+  background-color: rgb(48, 59, 55);
+  /* background-color: rgb(48, 126, 108, 0.4); */
+  width: 100%;
+  height: 500px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sessionControl .container .eachTab .name {
+  color: white;
+  font-size: 23px;
+}
+
+.sessionControl .container .eachTab .namePlusColor {
+  margin: 20px 0;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 80%;
+  text-align: center;
+}
+
+.sessionControl .container .eachTab .prices {
+  display: flex;
+  align-items: baseline;
+}
+
+.sessionControl .container .eachTab .prices .newItemPrice {
+  color: var(--deepGreen);
+}
+
+.sessionControl .container .eachTab .prices .oldItemPrice {
+  margin-left: 30px;
+  position: relative;
+  bottom: 1px;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: line-through 2px;
+}
+
+@media (max-width: 1250px) {
+  .sessionControl .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sessionControl .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 818px) {
+  .sessionControl .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sessionControl .header {
+    font-size: 30px;
+    text-align: center;
+  }
+}

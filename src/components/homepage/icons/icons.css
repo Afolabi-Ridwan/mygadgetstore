@@ -1,0 +1,52 @@
+/*.icons {
+    background:#000
+}*/
+
+.icons-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.marquee-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.svgImages {
+  /* width: 4rem; */
+  /* height: 100px; */
+  /* background-color: #efe2e6; */
+  padding: 1rem;
+  /* z-index: 999; */
+}
+.svgIcons {
+  /* width: 2.5rem; */
+  width: 5rem;
+  padding: 0 20px;
+  height: 80px;
+  border-radius: 50%;
+
+  /* background-color: var(--deepGreen); */
+  background-color: rgb(43, 153, 109, 0.9);
+}
+
+.svgIcons.return {
+  /* width: 5rem; */
+}
+
+.marquee-icons h3 {
+  font-size: 1rem;
+  color: white;
+  /* margin-top: 20px; */
+}
+
+.marquee-icons p {
+  font-size: 0.8rem;
+  color: white;
+  margin-top: 20px;
+}

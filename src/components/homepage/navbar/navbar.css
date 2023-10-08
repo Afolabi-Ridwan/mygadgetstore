@@ -1,0 +1,131 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 30px;
+  background-color: rgb(48, 126, 108, 0.4);
+}
+
+.navbar h1 {
+  font-size: 40px;
+}
+
+.navbar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.navbar .logo p {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--lemon);
+  margin-left: 5px;
+}
+.navbar form {
+  width: 40vw;
+  display: flex;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar form input {
+  width: 40vw;
+  padding: 10px 0 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+}
+
+.navbar form input:focus {
+  outline: 2px dashed var(--blue);
+}
+
+.navbar form button {
+  position: absolute;
+  right: 0;
+  display: block;
+  top: 0;
+  padding: 11px 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--lemon);
+  border: none;
+  color: white;
+}
+
+.navbar .icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .icons .heartIconTab,
+.navbar .icons .cartIconTab {
+  position: relative;
+}
+
+.navbar .icons .cart,
+.navbar .icons .heart {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.navbar .icons .heartIconTab p,
+.navbar .icons .cartIconTab p {
+  background-color: red;
+  border-radius: 50%;
+  padding: 0 5px 2px 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  margin-right: 10px;
+  margin-top: -10px;
+}
+
+.navbar .icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar .bars {
+  display: none;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+@media (max-width: 818px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar form {
+    width: 80vw;
+    display: flex;
+    margin: 15px 0;
+  }
+
+  .navbar form input {
+    width: 80vw;
+  }
+
+  .navbar .bars {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 5px 15px;
+    background-color: rgb(48, 126, 108, 0.4);
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 70%;
+    z-index: 999;
+    cursor: pointer;
+  }
+}
