@@ -1,0 +1,218 @@
+.newProducts {
+  margin-top: 50px;
+}
+
+  .newProducts .header{
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.newProducts .header h1{
+  font-size: 20px;
+  text-transform: uppercase;
+}
+  .newProducts .header .lists{
+  display: flex;
+  
+}
+
+.newProducts .header .lists li{
+  margin: 0 5px;
+  text-decoration: none;
+  list-style: none;
+  font-size: 14px;
+}
+
+  .newProducts .container .infoOne img {
+  width: 95%;
+  max-height: 150px;
+  margin: 50px 0;
+}
+
+.newProducts .container .eachTab .infos {
+  padding: 0 30px;
+  margin: 10px;
+  border: 2px solid rgb(48, 59, 55);
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  transition: ease-in-out 0.4s;
+}
+
+.newProducts .container .eachTab .infos:hover {
+  border: var(--lemon) 2px solid;
+}
+
+.newProducts .container .eachTab .infoTwo .name {
+  margin-bottom: 20px;
+  font-weight: 100;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.newProducts .container .eachTab .infoTwo .prices {
+  display: flex;
+  align-items: baseline;
+  margin: 20px 0;
+}
+
+.newProducts .container .eachTab .infoTwo .prices .newItemPrice {
+  color: var(--lemon);
+  font-size: 25px;
+}
+
+.newProducts .container .eachTab .infoTwo .prices .oldItemPrice {
+  margin-left: 50px;
+  text-decoration: line-through 2px;
+}
+
+.newProducts .container .navArrow {
+  position: absolute;
+  right: 0%;
+  margin-right: 20px;
+}
+
+.newProducts .container .navArrow .rightArrow {
+  margin-left: 20px;
+}
+
+.newProducts .container .navArrow .rightArrow,
+.newProducts .container .navArrow .leftArrow {
+  border-radius: 100%;
+  padding: 13px;
+  border: none;
+  background-color: rgb(40, 56, 50);
+  color: white;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.newProducts .container .navArrow .rightArrow:hover,
+.newProducts .container .navArrow .leftArrow:hover {
+  background-color: var(--lemon);
+}
+
+.newProducts .container .eachTab .hr {
+  width: 100%;
+  border-bottom: 3px solid rgb(48, 59, 55);
+}
+
+.newProducts .container .eachTab .icons {
+  margin-top: 35px;
+  display: flex;
+}
+
+.newProducts .container .eachTab .icons .eachIcon {
+  padding: 8px 10px;
+  border-radius: 50%;
+  background-color: rgb(225, 228, 226);
+  color: black;
+  cursor: pointer;
+}
+
+.newProducts .container .eachTab .icons .alt {
+  margin: 0 5px;
+}
+
+.newProducts .container .eachTab .icons .alt,
+.newProducts .container .eachTab .icons .heart,
+.newProducts .container .eachTab .icons .eye {
+  position: relative;
+}
+
+.newProducts .container .eachTab .icons .alt:hover .eachIcon,
+.newProducts .container .eachTab .icons .heart:hover .eachIcon,
+.newProducts .container .eachTab .icons .eye:hover .eachIcon {
+  color: var(--lemon);
+}
+
+.newProducts .container .eachTab .icons .alt:hover .altToolTip,
+.newProducts .container .eachTab .icons .heart:hover .heartToolTip,
+.newProducts .container .eachTab .icons .eye:hover .eyeToolTip {
+  margin-top: 0px;
+  opacity: 1;
+}
+
+.newProducts .container .eachTab .icons .altToolTip,
+.newProducts .container .eachTab .icons .heartToolTip,
+.newProducts .container .eachTab .icons .eyeToolTip {
+  margin-top: -15px;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+}
+
+.newProducts .container .eachTab .icons .altToolTip,
+.newProducts .container .eachTab .icons .heartToolTip,
+.newProducts .container .eachTab .icons .eyeToolTip {
+  position: absolute;
+  top: -30px;
+  font-size: 12px;
+  width: 170px;
+  left: -150%;
+  background-color: rgb(15, 15, 15, 0.7);
+  padding: 7px 15px;
+  letter-spacing: 0.5px;
+}
+
+.newProducts .container .eachTab .cartBtn {
+  margin-top: 30px;
+  padding: 7px 20px;
+  background-color: var(--lemon);
+  color: white;
+
+  text-transform: uppercase;
+  border: transparent 2px solid;
+  /* outline: none; */
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  display: flex;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+.newProducts .container .eachTab .cartBtn:hover {
+  color: var(--lemon);
+  font-weight: 900;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid var(--lemon);
+}
+
+.newProducts .container .eachTab .cartBtn:hover .cartIcon {
+  display: block;
+}
+
+.newProducts .container .eachTab .cartBtn .cartIcon {
+  margin-right: 13px;
+  display: none;
+}
+
+
+@media (max-width: 700px){
+  .newProducts .header{
+    display: block;
+    margin: 0 10px;
+  }
+
+.newProducts .header h1{
+  margin-bottom: 10px;
+}
+  .newProducts .header .lists{
+    margin-bottom: 10px;
+}
+
+/* .newProducts .header .lists li{
+  margin: 0 5px;
+  text-decoration: none;
+  list-style: none;
+  font-size: 14px;
+} */
+}

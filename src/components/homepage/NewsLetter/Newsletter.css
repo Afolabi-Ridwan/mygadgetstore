@@ -1,0 +1,92 @@
+.newsletter {
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top: 2px solid rgb(48, 59, 55);
+  border-bottom: 2px solid rgb(48, 59, 55);
+  padding: 50px 0;
+}
+
+.newsletter .container h1 {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+}
+
+.newsletter .container h1 span {
+  font-weight: bold;
+}
+
+.newsletter .container .envelopeIcon {
+  transform: rotate(20deg);
+  font-size: 170px;
+  position: absolute;
+  top: -150%;
+  right: 90%;
+  color: rgb(48, 59, 55, 0.7);
+  z-index: -100;
+}
+
+.newsletter .socialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter .container .socialIcons li a {
+  color: unset;
+  color: white;
+}
+
+.newsletter .container .socialIcons li {
+  list-style: none;
+  margin: 0 6px;
+  color: unset;
+  padding: 8px 10px;
+  border: 1px solid var(--ash);
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.newsletter .container .socialIcons li:hover a {
+  color: var(--lemon);
+}
+
+.newsletter .container .socialIcons li:hover {
+  margin-top: -10px;
+}
+
+.newsletter .container form input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+}
+
+.newsletter .container form {
+  margin: 20px 0;
+  position: relative;
+  width: 450px;
+}
+
+.newsletter .container button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 0 30px;
+  border: none;
+  background-color: var(--lemon);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .newsletter .container form {
+    width: 80vw;
+  }
+}

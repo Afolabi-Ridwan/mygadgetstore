@@ -1,7 +1,10 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Poppins:wght@200;300&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: var(--montSerrat);
 }
 
 :root {
@@ -10,9 +13,12 @@
   --lemon: rgb(43, 153, 109);
   --deepGreen: rgb(48, 126, 108);
   --fadedBlue: rgb(255, 0, 0, 0.7);
-  /* --fadedBlue: rgb(8, 0, 36, 0.7); */
   --deepFadedBlue: #303b37;
-  /* --deepFadedBlue: rgb(8, 0, 36, 0.9); */
+  --ash: rgb(48, 59, 55);
+  
+
+  --montSerrat: 'Montserrat', sans-serif;
+  --poppins: 'Poppins', sans-serif;
 }
 
 .linkTag {

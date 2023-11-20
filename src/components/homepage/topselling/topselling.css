@@ -1,0 +1,90 @@
+.topselling {
+  margin-top: 50px;
+}
+
+.topselling .header {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.topselling .header h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.topselling .container .infoOne img {
+  width: 100%;
+  max-height: 170px;
+  margin: 50px 0;
+}
+
+.topselling .container .eachTab .infos {
+  padding: 0 30px;
+  margin: 10px;
+  background-color: rgb(48, 59, 55);
+  border: 2px solid rgb(48, 59, 55);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  transition: ease-in-out 0.4s;
+}
+
+.topselling .container .eachTab .infos:hover {
+  border: var(--lemon) 2px solid;
+}
+
+.topselling .container .eachTab .infoTwo .name {
+  margin-bottom: 50px;
+  font-weight: 100;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.topselling .container .eachTab .infoTwo .prices {
+  display: flex;
+  align-items: baseline;
+  margin: 40px 0;
+}
+
+.topselling .container .eachTab .infoTwo .prices .newItemPrice {
+  color: var(--lemon);
+  font-size: 25px;
+}
+
+.topselling .container .eachTab .infoTwo .prices .oldItemPrice {
+  margin-left: 50px;
+  text-decoration: line-through 2px;
+}
+
+.topselling .container .navArrow {
+  position: absolute;
+  right: 0%;
+  margin-right: 20px;
+}
+
+.topselling .container .navArrow .rightArrow {
+  margin-left: 20px;
+}
+
+.topselling .container .navArrow .rightArrow,
+.topselling .container .navArrow .leftArrow {
+  border-radius: 100%;
+  padding: 13px;
+  border: none;
+  background-color: rgb(40, 56, 50);
+  color: white;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.topselling .container .navArrow .rightArrow:hover,
+.topselling .container .navArrow .leftArrow:hover {
+  background-color: var(--lemon);
+}

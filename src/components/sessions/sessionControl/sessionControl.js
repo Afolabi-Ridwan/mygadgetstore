@@ -26,7 +26,7 @@ function SessionControl(props) {
               <div className="prices">
                 <h1 className="newItemPrice">
                   {" "}
-                  {eachTab.itemInfo.newItemPrice}
+                  ${eachTab.itemInfo.newItemPrice}
                 </h1>
                 <p className="oldItemPrice"> {eachTab.itemInfo.oldItemPrice}</p>
               </div>
