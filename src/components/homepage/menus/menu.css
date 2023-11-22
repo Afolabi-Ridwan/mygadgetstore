@@ -15,6 +15,7 @@
   transition: ease-in-out 0.5s;
 }
 
+
 #menu ul li:hover {
   color: var(--lemon);
 }
@@ -35,6 +36,8 @@
     z-index: 1000;
     height: 100vh;
     top: 0;
+    /* width: 400px;
+    transform: translateX(-400px); */
     width: 400px;
     transform: translateX(-400px);
     transition: ease-in-out 0.7s;
@@ -50,7 +53,7 @@
     align-items: baseline;
     color: white;
     margin-top: 30px;
-    margin-left: 120px;
+    /* margin-left: 120px; */
   }
 
   .mobileNavbar .logo #circle {
@@ -62,9 +65,12 @@
   }
 
   .mobileNavbar .logo .xMark {
-    margin-left: 70px;
+    /* margin-left: 70px; */
+    margin-right: 20px;
     cursor: pointer;
     font-size: 35px;
+    position: absolute;
+    right: 0;
   }
 
   .mobileNavbar ul {
@@ -78,7 +84,6 @@
     margin-top: 40px;
     letter-spacing: 0.5px;
     width: 400px;
-
     position: relative;
     cursor: pointer;
     transition: ease-in 0.5s;
@@ -89,4 +94,18 @@
   .mobileNavbar li:hover {
     color: white;
   }
+}
+
+
+@media (max-width: 500px) {
+  .mobileNavbar {
+   
+    width: 90vw;
+    transform: translateX(-90vw);
+  }
+
+  .mobileNavbar li {
+    width: 90vw;
+  }
+
 }

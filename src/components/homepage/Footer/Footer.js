@@ -18,7 +18,7 @@ function Footer() {
 								<p>Lorem ipsum dolor sit<br/> amet, consectetur adipisicing<br/> elit, sed do eiusmod tempor incididunt ut.</p>
 								<ul className="footer-links">
 									<li><a href="#"><FaMapMarker/>1734 Stonecoal Road</a></li>
-									{/* <li><a href="#"><FaPhone/>+021-95-51-84</a></li> */}
+									<li><a href="#"><FaPhone/>+021-95-51-84</a></li>
 									<li><a href="#"><FaEnvelope/>email@email.com</a></li>
 								</ul>
 							</div>

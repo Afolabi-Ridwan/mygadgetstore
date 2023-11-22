@@ -66,8 +66,8 @@ function SignIn() {
                   />
                   <label htmlFor="rememberMe">Remember Me </label>
                 </div>
-                <div style={{ cursor: "pointer" }}>
-                  <p> Forgot Password? </p>
+                <div  style={{ cursor: "pointer" }}>
+                  <p className="forgotPassword"> Forgot Password? </p>
                 </div>
               </div>
               <button className={styles.submitBtn}>

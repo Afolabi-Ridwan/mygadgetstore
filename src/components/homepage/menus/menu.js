@@ -1,7 +1,7 @@
 import "./menu.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-
+import { Link } from "react-router-dom";
 function Menu(props) {
   return (
     <div>
@@ -19,7 +19,10 @@ function Menu(props) {
           </p>
         </div>
         <ul>
+        <Link className="linkTag" to={"/home"}>
+          
           <li>Home</li>
+          </Link>
           <li>Today's Deals</li>
           <li>New Products</li>
           <li>Trending Products</li>

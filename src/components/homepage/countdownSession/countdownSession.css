@@ -26,6 +26,7 @@
 .countdownSession h1 {
   margin: 20px 0;
   font-weight: bolder;
+  text-align: center;
 }
 
 .countdownSession button {

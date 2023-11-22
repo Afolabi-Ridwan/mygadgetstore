@@ -1,5 +1,8 @@
 import "./sessionControl.css";
 import { products } from "../../data/products";
+import Navbar from "../../homepage/navbar/navbar";
+import Menu from "../../homepage/menus/menu";
+import { useState } from "react";
 
 function SessionControl(props) {
   const getItemName = props.itemName;
@@ -8,8 +11,22 @@ function SessionControl(props) {
 
   console.log(product);
 
+  const [state, updateState] = useState(false);
+
+  function onDisplayMenu() {
+    updateState(true);
+  }
+
+  const onRemoveMenuHandler = () => {
+    updateState(false);
+  };
+
   return (
     <div className="sessionControl">
+        <Navbar displayMenu={onDisplayMenu}/>
+      <Menu stateHandler={state} removeMenuHandler={onRemoveMenuHandler}/>
+    {/* <div className="sessions"> */}
+    
       <h1 className="header"> Products available for {props.itemName} </h1>
 
       <div className="container">
@@ -34,7 +51,8 @@ function SessionControl(props) {
           </div>
         ))}
       </div>
-    </div>
+      </div>
+    // </div>
   );
 }
 

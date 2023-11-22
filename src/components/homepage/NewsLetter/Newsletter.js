@@ -16,28 +16,22 @@ function Newsletter() {
           Sign Up for the <span>NEWSLETTER </span>{" "}
         </h1>
 
-        {/* <div className="formTab"> */}
-          
-
-          {/* <div> */}
-            <form>
-            <div className="envelopeIcon">
-            <FaEnvelope  />
+        <form>
+          <div className="envelopeIcon">
+            <FaEnvelope />
           </div>
-          
-              <div>
-                <input type="email" placeholder="Enter your Email" />
-              </div>
 
-              <div className="submitBtn">
-                <button>
-                  {" "}
-                  <FaEnvelope /> Subscribe{" "}
-                </button>
-              </div>
-            </form>
-          {/* </div> */}
-        {/* </div> */}
+          <div>
+            <input type="email" placeholder="Enter your Email" />
+          </div>
+
+          <div className="submitBtn">
+            <button>
+              {" "}
+              <FaEnvelope /> Subscribe{" "}
+            </button>
+          </div>
+        </form>
 
         <ul className="socialIcons">
           <li>

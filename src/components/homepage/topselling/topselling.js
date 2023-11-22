@@ -3,13 +3,9 @@ import { products } from "../../data/products";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { IoHeartOutline } from "react-icons/io5";
 import {
   FaChevronLeft,
   FaChevronRight,
-  FaEye,
-  FaExchangeAlt,
-  FaShoppingCart,
 } from "react-icons/fa";
 import { useState } from "react";
 
