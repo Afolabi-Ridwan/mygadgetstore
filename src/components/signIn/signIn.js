@@ -40,7 +40,7 @@ function SignIn() {
             <h1> Hi, Welcome Back </h1>
 
             <form>
-              <label htmlFor="email"> Email</label>
+              <label htmlFor="email" style={{color: "white"}}> Email</label>
               <input
                 type="email"
                 id="email"
@@ -48,7 +48,7 @@ function SignIn() {
                 onChange={(event) => event.target.value}
               />
 
-              <label htmlFor="password"> Password </label>
+              <label htmlFor="password" style={{color: "white"}}> Password </label>
               <input
                 type="password"
                 id="password"
@@ -64,10 +64,10 @@ function SignIn() {
                     id="rememberMe"
                     onChange={(event) => event.target.value}
                   />
-                  <label htmlFor="rememberMe">Remember Me </label>
+                  <label htmlFor="rememberMe" style={{color: "white"}}>Remember Me </label>
                 </div>
                 <div  style={{ cursor: "pointer" }}>
-                  <p className="forgotPassword"> Forgot Password? </p>
+                  <p className="forgotPassword" style={{color: "white"}}> Forgot Password? </p>
                 </div>
               </div>
               <button className={styles.submitBtn}>
@@ -83,7 +83,7 @@ function SignIn() {
               <p> Sign up with Google </p>
             </div>
 
-            <p className={styles.noAccount}>
+            <p className={styles.noAccount} >
               {" "}
               Dont have an account? Sign up for free{" "}
             </p>

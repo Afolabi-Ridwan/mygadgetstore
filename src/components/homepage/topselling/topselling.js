@@ -58,7 +58,7 @@ function TopSelling() {
   const info = [cellphones, gaming, computers, tvs, speakers];
 
   return (
-    <div className="topselling" style={{marginTop: "80px"}}>
+    <div id="topselling" className="topselling" style={{marginTop: "80px"}}>
       <div className="header">
         <div>
           <h1> Top Selling </h1>

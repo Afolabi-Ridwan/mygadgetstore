@@ -23,8 +23,8 @@ function Menu(props) {
           
           <li>Home</li>
           </Link>
-          <li>Today's Deals</li>
-          <li>New Products</li>
+          <li> <a href="#topselling" className="linkTag">Today's Deals</a></li>
+          <li> <a href="#newProducts" className="linkTag">New Products</a></li>
           <li>Trending Products</li>
           <li>Top Selling</li>
         </ul>

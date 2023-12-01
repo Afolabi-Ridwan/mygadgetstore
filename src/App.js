@@ -7,6 +7,7 @@ import TVSession from "./components/sessions/tvSession/tvSession";
 import SpeakerSession from "./components/sessions/speakerSession/speakerSession";
 import GamingSession from "./components/sessions/gamingSession/gamingSession";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ViewItem from "./components/viewItem/viewItem";
 // import Navbar from "./components/homepage/navbar/navbar";
 // import Menu from "./components/homepage/menus/menu";
 // import { useState } from "react";
@@ -22,8 +23,6 @@ function App() {
   //   updateState(false);
   // };
 
- 
-
   return (
     <div className="App">
       <Router>
@@ -36,11 +35,12 @@ function App() {
 
         <Routes>
           <Route exact path="/home" element={<Home />} />
-          <Route exact path="/computerSession" element={<ComputerSession />} />
-          <Route exact path="/cellphoneSession" element={<PhoneSession />} />
-          <Route exact path="/tvSession" element={<TVSession />} />
-          <Route exact path="/speakerSession" element={<SpeakerSession />} />
-          <Route exact path="/gamingSession" element={<GamingSession />} />
+          <Route path="/computerSession" element={<ComputerSession />} />
+          <Route path="/cellphoneSession" element={<PhoneSession />} />
+          <Route path="/tvSession" element={<TVSession />} />
+          <Route path="/speakerSession" element={<SpeakerSession />} />
+          <Route path="/gamingSession" element={<GamingSession />} />
+          <Route path="/viewItem/:id/:getItemName" element={<ViewItem />} />
         </Routes>
       </Router>
     </div>

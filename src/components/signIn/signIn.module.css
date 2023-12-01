@@ -1,5 +1,5 @@
 .signIn {
-  background-color: white;
+  background-color: var(--ash);
 }
 
 .imageContainer {
@@ -68,7 +68,8 @@ label {
 }
 
 .form h1 {
-  color: rgb(27, 31, 54);
+  color: var(--lemon);
+  /* color: rgb(27, 31, 54); */
 }
 
 .googleSignIn {
@@ -87,7 +88,8 @@ label {
 
 .submitBtn {
   border: none;
-  background-color: rgb(27, 31, 54);
+  background-color: var(--lemon);
+  /* background-color: rgb(27, 31, 54); */
   padding: 20px 0;
   color: white;
 }
@@ -98,7 +100,8 @@ label {
 }
 
 .noAccount {
-  color: rgb(27, 31, 54);
+  color: var(--lemon);
+  /* color: rgb(27, 31, 54); */
   margin-top: 10px;
   font-size: 20px;
   font-weight: 500;

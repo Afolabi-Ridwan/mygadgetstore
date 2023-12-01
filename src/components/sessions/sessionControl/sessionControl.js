@@ -3,6 +3,7 @@ import { products } from "../../data/products";
 import Navbar from "../../homepage/navbar/navbar";
 import Menu from "../../homepage/menus/menu";
 import { useState } from "react";
+import {Link} from "react-router-dom"
 
 function SessionControl(props) {
   const getItemName = props.itemName;
@@ -21,17 +22,27 @@ function SessionControl(props) {
     updateState(false);
   };
 
+  // const viewItemHandler = (id) => {
+  //   const item = product.filter(eachproduct => eachproduct.id === id)
+  //   const otherItems = product.filter(eachproduct => eachproduct.id !== id)
+  //   return {item, otherItems};
+  // }
+
+  // onClick={ () => viewItemHandler(eachTab.id)}
   return (
+    <div >
     <div className="sessionControl">
-        <Navbar displayMenu={onDisplayMenu}/>
+      <Navbar displayMenu={onDisplayMenu}/>
       <Menu stateHandler={state} removeMenuHandler={onRemoveMenuHandler}/>
-    {/* <div className="sessions"> */}
     
-      <h1 className="header"> Products available for {props.itemName} </h1>
+      <h1 className="header"> Prodaucts available for {props.itemName} </h1>
 
       <div className="container">
         {product.map((eachTab) => (
-          <div className="eachTab" key={eachTab.id}>
+
+          <div  key={eachTab.id} >
+            <Link to={`/viewItem/${eachTab.id}/${getItemName}`}>
+            <div className="eachTab" >
             <div className="infoOne">
               <img src={eachTab.itemInfo.itemImg[0]} alt="ajk" />
             </div>
@@ -48,11 +59,17 @@ function SessionControl(props) {
                 <p className="oldItemPrice"> {eachTab.itemInfo.oldItemPrice}</p>
               </div>
             </div>
+            </div>
+            </Link>
           </div>
+
         ))}
       </div>
       </div>
-    // </div>
+
+      </div>
+
+  
   );
 }
 

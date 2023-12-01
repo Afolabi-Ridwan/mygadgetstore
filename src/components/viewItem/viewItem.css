@@ -1,0 +1,286 @@
+.viewItem .product {
+  padding: 0 20px;
+}
+
+.viewItem .product .firstTab {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.viewItem .product .firstTab .infos .category {
+  font-size: 20px;
+  color: white;
+}
+
+.viewItem .product .firstTab .infos .name {
+  font-size: 35px;
+  font-weight: bolder;
+  margin: 10px 0;
+  color: white;
+}
+
+.viewItem .product .firstTab .infos h3 {
+  font-size: 30px;
+  color: white;
+}
+
+.viewItem .product .firstTab .infos .shortDesc {
+  /* font-size: 18px; */
+  color: white;
+  width: 50vw;
+  margin: 10px 0;
+}
+
+.viewItem .product .firstTab .infos .cartBtn {
+  padding: 15px 20px;
+  background-color: var(--lemon);
+  border: none;
+  color: white;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.viewItem .product .firstTab .infos .buyBtn {
+  padding: 15px 20px;
+  background-color: transparent;
+  border: none;
+  border: 1px solid var(--lemon);
+  color: white;
+  margin-top: 15px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.viewItem .product .firstTab img {
+  width: 300px;
+  height: auto;
+  margin-right: 120px;
+}
+
+.viewItem .product .secondTab  {
+    font-weight: lighter;
+  }
+
+  .viewItem .product .secondTab .description.active {
+    font-weight: bold;
+  }
+
+  .viewItem .product .secondTab .review.active {
+    font-weight: bold;
+  }
+
+.viewItem .product .secondTab .reviewTab .name {
+  margin: 20px 0;
+}
+
+.viewItem .product .secondTab .reviewTab .rating {
+  color: var(--lemon);
+  margin-bottom: 5px;
+}
+
+
+
+.viewItem .product .secondTab .descriptionTab p {
+    font-size: 15px;
+}
+
+.viewItem .product .secondTab .reviewTab h4 {
+  margin-top: 40px;
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.viewItem .product .secondTab .reviewTab form input {
+  margin: 20px 0;
+  padding: 15px 10px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.viewItem .product .secondTab .reviewTab form input:focus {
+    outline: none;
+}
+
+.viewItem .product .secondTab .reviewTab form textarea:focus {
+    outline: none;
+}
+
+.viewItem .product .secondTab .reviewTab form textarea {
+  height: 100px;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 15px 10px;
+  color: white;
+}
+
+.viewItem .product .secondTab .reviewTab form .stars div {
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.viewItem .product .secondTab .reviewTab form {
+  width: 60vw;
+}
+
+.viewItem .product .secondTab .reviewTab form .stars {
+  display: flex;
+  color: var(--lemon);
+  margin-bottom: 20px;
+}
+
+.viewItem .product .secondTab .reviewTab form button{
+    width: 100px;
+    padding: 15px 0;
+    background-color: var(--lemon);
+    margin-top: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.viewItem .otherProducts {
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.viewItem .otherProducts .header {
+  font-size: 25px;
+  color: white;
+  text-transform: capitalize;
+  margin-top: 30px;
+}
+
+.viewItem .otherProducts .container .eachTab .infoOne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.viewItem .otherProducts .container .infoOne img {
+  width: 80%;
+  height: 300px;
+  object-fit: contain;
+  transition: ease 0.5s;
+  margin-bottom: 50px;
+}
+
+.viewItem .otherProducts .container .infoOne img:hover {
+  width: 85%;
+  height: 310px;
+}
+
+.viewItem .otherProducts .container .eachTab .infoTwo {
+  position: absolute;
+  margin-top: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.viewItem .otherProducts .container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.viewItem .otherProducts .container .eachTab {
+  background-color: rgb(48, 59, 55);
+  /* background-color: rgb(48, 126, 108, 0.4); */
+  width: 100%;
+  height: 500px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.viewItem .otherProducts .container .eachTab .name {
+  color: white;
+  font-size: 23px;
+}
+
+.viewItem .otherProducts .container .eachTab .namePlusColor {
+  margin: 20px 0;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 80%;
+  text-align: center;
+}
+
+.viewItem .otherProducts .container .eachTab .prices {
+  display: flex;
+  align-items: baseline;
+}
+
+.viewItem .otherProducts .container .eachTab .prices .newItemPrice {
+  color: var(--deepGreen);
+}
+
+.viewItem .otherProducts .container .eachTab .prices .oldItemPrice {
+  margin-left: 30px;
+  position: relative;
+  bottom: 1px;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: line-through 2px;
+}
+
+/* .viewItem{
+    position: absolute;
+    top: 0;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+  } */
+
+@media (max-width: 1250px) {
+  .viewItem .otherProducts .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .viewItem .otherProducts .container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .viewItem .product .firstTab {
+    flex-direction: column;
+    text-align: center;
+}
+
+.viewItem .product .firstTab .infos .shortDesc {
+    /* font-size: 18px; */
+    color: white;
+    width: 85vw;
+}
+
+.viewItem .product .secondTab .reviewTab form {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 818px) {
+  .viewItem .otherProducts .container {
+    grid-template-columns: 1fr;
+  }
+
+  .viewItem .otherProducts .header {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .viewItem .product .firstTab img {
+    margin-right: 0px;
+  }
+
+
+}

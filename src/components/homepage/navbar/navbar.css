@@ -23,6 +23,47 @@
   background-color: var(--lemon);
   margin-left: 5px;
 }
+
+.navbar .dropUp{
+  transform: translate(-15px);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.navbar .dropUp.active{
+  opacity: 1;
+
+}
+
+.navbar .dropDown.remove{
+  opacity: 0;
+}
+
+.navbar .dropDown{
+  cursor: pointer;
+}
+
+.navbar .signInOrOut{
+  position: absolute;
+  transform: translate(85px, 75px);
+  width: 115px;
+  background-color: white;
+  color: black;
+  padding: 20px 0 20px 10px;
+  z-index: 900;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  box-shadow: 0 5px 5px rgb(0, 0, 0, 0.2);
+}
+
+.navbar .signInOrOut p{
+cursor: pointer;
+}
+
+.navbar .signInOrOut.active{
+  opacity: 1;
+}
+
 .navbar form {
   width: 40vw;
   display: flex;
@@ -49,12 +90,14 @@
   right: 0;
   display: block;
   top: 0;
-  padding: 11.5px 20px;
+  padding: 0 20px;
+  height: 100%;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: var(--lemon);
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 .navbar .icons {

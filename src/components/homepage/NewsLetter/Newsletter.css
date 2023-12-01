@@ -83,10 +83,15 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   color: white;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
   .newsletter .container form {
     width: 80vw;
+  }
+
+  .newsletter .container button {
+    padding: 0 10px;
   }
 }

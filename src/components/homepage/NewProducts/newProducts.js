@@ -75,7 +75,7 @@ function NewProducts() {
   ];
 
   return (
-    <div className="newProducts">
+    <div  id="newProducts" >
       <div className="header"> 
         <div>
           <h1> New Products</h1>
