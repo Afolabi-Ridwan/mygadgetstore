@@ -1,6 +1,7 @@
 import "./countdownSession.css"
 import firstImage from "../images/hotdeal.png"
 import CountdownTimer from "./timecounter";
+import { Link } from "react-router-dom";
 
 function CountdownSession() {
   return (
@@ -10,7 +11,11 @@ function CountdownSession() {
         <CountdownTimer/>
         <h1> HOT DEAL THIS WEEK</h1>
         <p>New Collection Up to 50% OFF</p>
-        <button> Shop Now </button>
+        <button> 
+          <Link className="linkTag" to={"/shopitems"}>
+          Shop Now
+          </Link>
+           </button>
       </div>
     </div>
   );

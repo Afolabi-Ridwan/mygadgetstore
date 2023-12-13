@@ -15,7 +15,6 @@
   transition: ease-in-out 0.5s;
 }
 
-
 #menu ul li:hover {
   color: var(--lemon);
 }

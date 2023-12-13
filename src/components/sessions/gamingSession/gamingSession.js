@@ -1,4 +1,3 @@
-import "./gamingSession.css";
 import SessionControl from "../sessionControl/sessionControl";
 
 function GamingSession() {

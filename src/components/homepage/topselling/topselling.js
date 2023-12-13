@@ -8,6 +8,7 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function TopSelling() {
   const [sliderRef, setSliderRef] = useState(null);
@@ -49,13 +50,14 @@ function TopSelling() {
     ],
   };
 
-  const cellphones = products[0].selectedProducts[0].cellphones[30].itemInfo;
-  const gaming = products[0].selectedProducts[0].gaming[5].itemInfo;
-  const computers = products[0].selectedProducts[0].computers[6].itemInfo;
-  const tvs = products[0].selectedProducts[0].tv[5].itemInfo;
-  const speakers = products[0].selectedProducts[0].speakers[6].itemInfo;
-
+  const cellphones = products[0].selectedProducts[0].cellphones[30];
+  const gaming = products[0].selectedProducts[0].gaming[5];
+  const computers = products[0].selectedProducts[0].computers[6];
+  const tvs = products[0].selectedProducts[0].tv[5];
+  const speakers = products[0].selectedProducts[0].speakers[6];
+  
   const info = [cellphones, gaming, computers, tvs, speakers];
+
 
   return (
     <div id="topselling" className="topselling" style={{marginTop: "80px"}}>
@@ -69,22 +71,24 @@ function TopSelling() {
         <Slider ref={setSliderRef} {...settings}>
           {info.map((eachTab) => (
             <div className="eachTab" key={eachTab.id}>
+              <Link className="linkTag" to={`viewItem/${eachTab.id}/${eachTab.itemInfo.category}`}>
               <div className="infos">
-                <div className="infoOne">
-                  <img src={eachTab.itemImg[0]} alt="ajk" />
+                <div className="infoOne" >
+                  <img src={eachTab.itemInfo.itemImg[0]} alt="ajk" />
                 </div>
 
                 <div className="infoTwo">
-                  <p className="name"> {eachTab.category}</p>
-                  <p className="namePlusColor"> {eachTab.description1}</p>
+                  <p className="name"> {eachTab.itemInfo.category}</p>
+                  <p className="namePlusColor"> {eachTab.itemInfo.description1}</p>
 
                   <div className="prices">
-                    <h1 className="newItemPrice"> ${eachTab.newItemPrice}</h1>
-                    <p className="oldItemPrice"> {eachTab.oldItemPrice}</p>
+                    <h1 className="newItemPrice"> ${eachTab.itemInfo.newItemPrice}</h1>
+                    <p className="oldItemPrice"> {eachTab.itemInfo.oldItemPrice}</p>
                     
                   </div>
                 </div>
               </div>
+              </Link>
             </div>
           ))}
         </Slider>

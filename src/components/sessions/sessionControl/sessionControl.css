@@ -81,12 +81,13 @@
 }
 
 .sessionControl .container .eachTab .prices .oldItemPrice {
-  margin-left: 30px;
+  margin-left: 40px;
   position: relative;
   bottom: 1px;
-  font-weight: 600;
-  font-size: 20px;
+  /* font-weight: 600; */
+  font-size: 17px;
   text-decoration: line-through 2px;
+  color: white;
 }
 
 /* .viewItem{

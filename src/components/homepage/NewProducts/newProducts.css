@@ -39,6 +39,7 @@
   max-height: 150px; */
   margin: 20px 0;
   width: 90%;
+  object-fit: contain;
   height: 230px;
 }
 

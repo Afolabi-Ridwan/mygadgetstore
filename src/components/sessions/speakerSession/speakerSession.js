@@ -1,4 +1,3 @@
-import "./speakerSession.css";
 import SessionControl from "../sessionControl/sessionControl";
 
 function SpeakerSession() {

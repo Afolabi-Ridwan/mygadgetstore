@@ -10,18 +10,24 @@ import firstImage from "./images/1679220140028test";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+
 
 function Navbar(props) {
+
 
   const [state, updateState] = useState(false)
 
   const dropdownHandler = () => {
     updateState (prev => !prev)
   }
-
+  
+ 
+  const counter = useSelector(state => state.counter);
 
   return (
     <div className="navbar">
+
       <div className="logo" style={{ cursor: "pointer" }}>
         <div>
           <Link className="linkTag" to="/home">
@@ -46,12 +52,13 @@ function Navbar(props) {
       <div className="icons">
         <div className="heartIconTab">
           <FontAwesomeIcon className="heart" icon={faHeart} />
-          <p> 1</p>
+          <p className={ ` cartNo ${ counter > 0 && "cartAdded"}`}> 1</p>
         </div>
         <div className="cartIconTab">
           <FontAwesomeIcon className="cart" icon={faCartShopping} />
-          <p> 21</p>
+          <p className={ `cartNo ${counter > 0 && "cartAdded"}`}> {counter}</p>
         </div>
+
         <div style={{display: "flex", alignItems: "baseline"}}>
           <div>
           <img src={firstImage} alt="sf" />
@@ -68,7 +75,7 @@ function Navbar(props) {
         </div>
         <div className={`signInOrOut ${state === true ? "active" : ""}`}>
           <p> Sign In</p>
-          <p style={{ marginTop: "15px" }}> Sign Out</p>
+          <p style={{ marginTop: "15px" }}> <Link className="linkTag" to={"/"}>Sign Out</Link></p>
         </div>
       </div>
     </div>

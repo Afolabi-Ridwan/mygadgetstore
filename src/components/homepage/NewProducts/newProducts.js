@@ -12,6 +12,7 @@ import {
   FaShoppingCart,
 } from "react-icons/fa";
 import { useState } from "react";
+import {ToastContainer, toast} from "react-toastify"
 
 function NewProducts() {
   const [sliderRef, setSliderRef] = useState(null);
@@ -53,15 +54,15 @@ function NewProducts() {
     ],
   };
 
-  const cellphones = products[0].selectedProducts[0].cellphones[1].itemInfo;
-  const gaming = products[0].selectedProducts[0].gaming[1].itemInfo;
-  const computers = products[0].selectedProducts[0].computers[1].itemInfo;
-  const tvs = products[0].selectedProducts[0].tv[1].itemInfo;
-  const speakers = products[0].selectedProducts[0].speakers[2].itemInfo;
+  const cellphones = products[0].selectedProducts[0].cellphones[1];
+  const gaming = products[0].selectedProducts[0].gaming[1];
+  const computers = products[0].selectedProducts[0].computers[1];
+  const tvs = products[0].selectedProducts[0].tv[1];
+  const speakers = products[0].selectedProducts[0].speakers[2];
 
-  const cellphones2 = products[0].selectedProducts[0].cellphones[2].itemInfo;
-  const gaming2 = products[0].selectedProducts[0].gaming[2].itemInfo;
-  const computers2 = products[0].selectedProducts[0].computers[1].itemInfo;
+  const cellphones2 = products[0].selectedProducts[0].cellphones[2];
+  const gaming2 = products[0].selectedProducts[0].gaming[2];
+  const computers2 = products[0].selectedProducts[0].computers[1];
 
   const info = [
     cellphones,
@@ -73,6 +74,11 @@ function NewProducts() {
     gaming2,
     computers2,
   ];
+
+  function addToCart(){
+    toast.success("Added to Cart!!!")
+  } 
+
 
   return (
     <div  id="newProducts" >
@@ -96,16 +102,16 @@ function NewProducts() {
             <div className="eachTab" key={eachTab.id}>
               <div className="infos">
                 <div className="infoOne">
-                  <img src={eachTab.itemImg[0]} alt="ajk" />
+                  <img src={eachTab.itemInfo.itemImg[0]} alt="ajk" />
                 </div>
 
                 <div className="infoTwo">
-                  <p className="name"> {eachTab.category}</p>
-                  <p className="namePlusColor"> {eachTab.description1}</p>
+                  <p className="name"> {eachTab.itemInfo.category}</p>
+                  <p className="namePlusColor"> {eachTab.itemInfo.description1}</p>
 
                   <div className="prices">
-                    <h1 className="newItemPrice"> ${eachTab.newItemPrice}</h1>
-                    <p className="oldItemPrice"> {eachTab.oldItemPrice}</p>
+                    <h1 className="newItemPrice"> ${eachTab.itemInfo.newItemPrice}</h1>
+                    <p className="oldItemPrice"> {eachTab.itemInfo.oldItemPrice}</p>
                   </div>
                 </div>
 
@@ -132,12 +138,19 @@ function NewProducts() {
                   </div>
                 </div>
 
-                <button className="cartBtn">
+                <button className="cartBtn" onClick={addToCart}>
                   <div className="cartIcon">
                   <FaShoppingCart/>
                   </div>
                   Add to Cart
                 </button>
+                <ToastContainer
+                  position="top-right"
+                  autoClose={4000}
+                  closeOnClick
+                  draggable
+                  pauseOnHover
+                  theme="dark"/>
               </div>
             </div>
           ))}

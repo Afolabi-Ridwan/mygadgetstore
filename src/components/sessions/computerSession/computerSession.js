@@ -1,4 +1,3 @@
-import "./computerSession.css";
 import SessionControl from "../sessionControl/sessionControl";
 
 function ComputerSession() {

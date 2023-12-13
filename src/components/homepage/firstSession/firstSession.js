@@ -65,7 +65,7 @@ function FirstSession() {
     { id: 5, value: "/computerSession" },
   ];
 
-  function dod(id) {
+  function filterLinksHandler(id) {
     const filterLinks = links.filter((link) => link.id === id);
     return filterLinks[0].value;
   }
@@ -75,7 +75,7 @@ function FirstSession() {
       <div className="container">
         {infos.map((info) => (
           <div className="products" key={info.id}>
-            <Link to={dod(info.id)}>
+            <Link to={filterLinksHandler(info.id)}>
               <div className="image">
                 <img src={info.image} alt="aae" />
               </div>

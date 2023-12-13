@@ -5,6 +5,8 @@ import Menu from "../../homepage/menus/menu";
 import { useState } from "react";
 import {Link} from "react-router-dom"
 
+
+
 function SessionControl(props) {
   const getItemName = props.itemName;
 
@@ -12,15 +14,15 @@ function SessionControl(props) {
 
   console.log(product);
 
-  const [state, updateState] = useState(false);
+  // const [state, updateState] = useState(false);
 
-  function onDisplayMenu() {
-    updateState(true);
-  }
+  // function onDisplayMenu() {
+  //   updateState(true);
+  // }
 
-  const onRemoveMenuHandler = () => {
-    updateState(false);
-  };
+  // const onRemoveMenuHandler = () => {
+  //   updateState(false);
+  // };
 
   // const viewItemHandler = (id) => {
   //   const item = product.filter(eachproduct => eachproduct.id === id)
@@ -29,19 +31,21 @@ function SessionControl(props) {
   // }
 
   // onClick={ () => viewItemHandler(eachTab.id)}
+
+
+  
   return (
+
     <div >
     <div className="sessionControl">
-      <Navbar displayMenu={onDisplayMenu}/>
-      <Menu stateHandler={state} removeMenuHandler={onRemoveMenuHandler}/>
     
-      <h1 className="header"> Prodaucts available for {props.itemName} </h1>
+      <h1 className="header"> Products available for {props.itemName} </h1>
 
       <div className="container">
         {product.map((eachTab) => (
 
           <div  key={eachTab.id} >
-            <Link to={`/viewItem/${eachTab.id}/${getItemName}`}>
+            <Link className="linkTag"  to={`/viewItem/${eachTab.id}/${getItemName}`}>
             <div className="eachTab" >
             <div className="infoOne">
               <img src={eachTab.itemInfo.itemImg[0]} alt="ajk" />
