@@ -5,22 +5,20 @@ import App from "./App";
 import { ToastContainer } from "react-toastify";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
-import { store } from "./redux/store/store";
-import { configureStore } from "@reduxjs/toolkit";
-
-import RootReducer from "./redux/reducers/rootReducer";
-
-const stor = configureStore( {reducer: {
-  
-}})
+import CartStore from "./redux/cartStore/cartStore";
+import {store} from "./redux/cartSlice/cartReducer";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+
+
 root.render(
-    <Provider store={store}>
+  <Provider store={store}>
     <React.StrictMode>
       <BrowserRouter>
-        <App />
+        <CartStore>
+          <App />
+        </CartStore>
+
         <ToastContainer
           position="top-right"
           autoClose={4000}
@@ -31,5 +29,5 @@ root.render(
         />
       </BrowserRouter>
     </React.StrictMode>
-    </Provider>
+  </Provider>
 );

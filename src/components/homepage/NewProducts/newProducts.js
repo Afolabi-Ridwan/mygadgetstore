@@ -12,7 +12,11 @@ import {
   FaShoppingCart,
 } from "react-icons/fa";
 import { useState } from "react";
-import {ToastContainer, toast} from "react-toastify"
+import { ToastContainer, toast } from "react-toastify";
+// import { useContext } from "react";
+// import { Context } from "../../../redux/cartStore/storeContext";
+import { useDispatch } from "react-redux";
+import { CartActions } from "../../../redux/cartSlice/cartSlice";
 
 function NewProducts() {
   const [sliderRef, setSliderRef] = useState(null);
@@ -75,20 +79,31 @@ function NewProducts() {
     computers2,
   ];
 
-  function addToCart(){
-    toast.success("Added to Cart!!!")
-  } 
 
+  const dispatch = useDispatch();
+
+  function addToCart(itemAdded) {
+    toast.success("Added to Cart!!!");
+
+    dispatch(
+      CartActions.addItem({
+        id: itemAdded.id,
+        name: itemAdded.itemInfo.name,
+        img: itemAdded.itemInfo.itemImg[0],
+        newPrice: itemAdded.itemInfo.newItemPrice,
+      })
+    );
+  }
 
   return (
-    <div  id="newProducts" >
-      <div className="header"> 
+    <div id="newProducts">
+      <div className="header">
         <div>
           <h1> New Products</h1>
         </div>
         <div>
           <ul className="lists">
-            <li style={{marginLeft: "0px"}}>Laptops</li>
+            <li style={{ marginLeft: "0px" }}>Laptops</li>
             <li>SmartPhones</li>
             <li>Cameras</li>
             <li>TVs</li>
@@ -107,40 +122,49 @@ function NewProducts() {
 
                 <div className="infoTwo">
                   <p className="name"> {eachTab.itemInfo.category}</p>
-                  <p className="namePlusColor"> {eachTab.itemInfo.description1}</p>
+                  <p className="namePlusColor">
+                    {" "}
+                    {eachTab.itemInfo.description1}
+                  </p>
 
                   <div className="prices">
-                    <h1 className="newItemPrice"> ${eachTab.itemInfo.newItemPrice}</h1>
-                    <p className="oldItemPrice"> {eachTab.itemInfo.oldItemPrice}</p>
+                    <h1 className="newItemPrice">
+                      {" "}
+                      ${eachTab.itemInfo.newItemPrice}
+                    </h1>
+                    <p className="oldItemPrice">
+                      {" "}
+                      {eachTab.itemInfo.oldItemPrice}
+                    </p>
                   </div>
                 </div>
 
                 <div className="hr"></div>
 
                 <div className="icons">
-                  <div className= " heart">
+                  <div className=" heart">
                     <div className="eachIcon">
-                    <IoHeartOutline  />
+                      <IoHeartOutline />
                     </div>
-                  <span className="heartToolTip"> ADD TO WISHLIST </span>
+                    <span className="heartToolTip"> ADD TO WISHLIST </span>
                   </div>
-                  <div className= "alt">
-                  <div className="eachIcon">
-                  <FaExchangeAlt  />
+                  <div className="alt">
+                    <div className="eachIcon">
+                      <FaExchangeAlt />
                     </div>
-                  <span className="altToolTip"> ADD TO COMPARE </span>
+                    <span className="altToolTip"> ADD TO COMPARE </span>
                   </div>
-                  <div className= " eye">
-                  <div className="eachIcon">
-                  <FaEye />
+                  <div className=" eye">
+                    <div className="eachIcon">
+                      <FaEye />
                     </div>
-                  <span className="eyeToolTip"> QUICK VIEW </span>
+                    <span className="eyeToolTip"> QUICK VIEW </span>
                   </div>
                 </div>
 
-                <button className="cartBtn" onClick={addToCart}>
+                <button className="cartBtn" onClick={() => addToCart(eachTab)}>
                   <div className="cartIcon">
-                  <FaShoppingCart/>
+                    <FaShoppingCart />
                   </div>
                   Add to Cart
                 </button>
@@ -150,12 +174,13 @@ function NewProducts() {
                   closeOnClick
                   draggable
                   pauseOnHover
-                  theme="dark"/>
+                  theme="dark"
+                />
               </div>
             </div>
           ))}
         </Slider>
-        <div className="navArrow" style={{marginTop: "10px"}}>
+        <div className="navArrow" style={{ marginTop: "10px" }}>
           <button onClick={sliderRef?.slickPrev} className="leftArrow">
             <FaChevronLeft />
           </button>

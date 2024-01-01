@@ -14,6 +14,9 @@ import Menu from "./components/homepage/menus/menu";
 import { useState } from "react";
 import Footer from "./components/homepage/Footer/Footer";
 import { useLocation } from "react-router-dom";
+import CartStore from "./redux/cartStore/cartStore";
+import { Context } from "./redux/cartStore/storeContext";
+import ResultModal from "./ResultModal/ResultModal";
 
 function App() {
   const [state, updateState] = useState(false);
@@ -47,6 +50,8 @@ function App() {
           <Route path="/viewItem/:id/:getItemName" element={<ViewItem />} />
           <Route path="home/viewItem/:id/:getItemName" element={<ViewItem />} />
           <Route path="/shopItems" element={<ShopItems />} />
+          <Route path="/resultModal" element={<ResultModal />} />
+          
         </Routes>
 
         

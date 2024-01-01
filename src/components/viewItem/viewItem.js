@@ -1,18 +1,19 @@
 import { useParams } from "react-router-dom";
 import { product } from "../data/data";
 import "./viewItem.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { useRef } from "react";
 
-import {  toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-import { useSelector, useDispatch } from "react-redux";
-
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useContext } from "react";
+import { Context } from "../../redux/cartStore/storeContext";
+import { useDispatch } from "react-redux";
+import { CartActions } from "../../redux/cartSlice/cartSlice";
 
 function ViewItem(props) {
   const { id, getItemName } = useParams();
-
 
   const productInfo = product.filter((eachproduct) => eachproduct.id === id);
   const otherProduct = product.filter((eachproduct) => eachproduct.id !== id);
@@ -25,7 +26,6 @@ function ViewItem(props) {
   const filteredCategory = otherProduct.filter(
     (eachProduct) => eachProduct.itemInfo.category === itemName
   );
-
 
   const [view, setView] = useState(false);
 
@@ -40,19 +40,23 @@ function ViewItem(props) {
     console.log(message.current.value);
   }
 
+  //  const {cartAmountDispatch} = useContext(Context)
+  const dispatch = useDispatch();
 
-  
-  const dispatch = useDispatch()
+  function addToCart(itemAdded) {
+    toast.success("Added to Cart!!!");
 
-  function addToCart(){
-    toast.success("Added to Cart!!!")
-    return dispatch({type: "INCREMENT"})
+    dispatch( CartActions.addItem({
+        id: itemAdded.id,
+        name: itemAdded.itemInfo.name,
+        img: itemAdded.itemInfo.itemImg[0],
+        newPrice: itemAdded.itemInfo.newItemPrice,
+      })
+    );
   }
-  
+
   return (
     <div className="viewItem">
-      
-
       <div className="product">
         {productInfo.map((eachInfo) => (
           <div className="container" key={eachInfo.id}>
@@ -71,12 +75,16 @@ function ViewItem(props) {
 
                 <div className="buttons">
                   <div className="cartBtnContainer">
-                  <button onClick={addToCart}  className="cartBtn">Add to Cart</button>
+                    <button
+                      onClick={() => addToCart(eachInfo)}
+                      className="cartBtn"
+                    >
+                      Add to Cart
+                    </button>
                   </div>
 
                   <div className="buyBtnContainer">
-                    <button  className="buyBtn">Buy Now</button>
-                    {/* <button onClick={props.buyNowHandler} className="buyBtn">Buy Now</button> */}
+                    <button className="buyBtn">Buy Now</button>
                     <div id="filler"> </div>
                   </div>
                 </div>
@@ -191,21 +199,22 @@ function ViewItem(props) {
                     </p>
                   </div>
 
-                  <button  className="addToCartBtn" onClick={addToCart}> Add to cart</button>
-                  
+                  <button
+                    className="addToCartBtn"
+                    onClick={() => addToCart(eachTab)}
+                  >
+                    {" "}
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
       </div>
-
-
     </div>
   );
 }
 
 export default ViewItem;
-
 
