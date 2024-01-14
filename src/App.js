@@ -17,6 +17,7 @@ import { useLocation } from "react-router-dom";
 import CartStore from "./redux/cartStore/cartStore";
 import { Context } from "./redux/cartStore/storeContext";
 import ResultModal from "./ResultModal/ResultModal";
+import CheckOut from "./CheckOut/checkOut";
 
 function App() {
   const [state, updateState] = useState(false);
@@ -51,6 +52,7 @@ function App() {
           <Route path="home/viewItem/:id/:getItemName" element={<ViewItem />} />
           <Route path="/shopItems" element={<ShopItems />} />
           <Route path="/resultModal" element={<ResultModal />} />
+          <Route path="/checkOut" element={<CheckOut/>} />
           
         </Routes>
 

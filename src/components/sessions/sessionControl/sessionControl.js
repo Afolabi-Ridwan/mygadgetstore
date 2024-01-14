@@ -14,23 +14,7 @@ function SessionControl(props) {
 
   console.log(product);
 
-  // const [state, updateState] = useState(false);
 
-  // function onDisplayMenu() {
-  //   updateState(true);
-  // }
-
-  // const onRemoveMenuHandler = () => {
-  //   updateState(false);
-  // };
-
-  // const viewItemHandler = (id) => {
-  //   const item = product.filter(eachproduct => eachproduct.id === id)
-  //   const otherItems = product.filter(eachproduct => eachproduct.id !== id)
-  //   return {item, otherItems};
-  // }
-
-  // onClick={ () => viewItemHandler(eachTab.id)}
 
 
   

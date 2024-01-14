@@ -10,3 +10,6 @@ import { configureStore } from "@reduxjs/toolkit";
 //   export default store;
 
 
+// jamie went to the store to buy a horse
+
+// import  Nailah is my niece and my good firend whpwhen you live you spontaniously combust

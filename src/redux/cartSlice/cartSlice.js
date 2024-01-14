@@ -14,7 +14,7 @@ const setCartInfo = (cartItems, counter) => {
   localStorage.setItem("counter", JSON.stringify(counter));
 };
 
-const initialState = { cartItems: cartItems, counter: counter };
+const initialState = { cartItems: cartItems, counter: counter};
 
 
 const CartSlice = createSlice({
@@ -35,18 +35,36 @@ const CartSlice = createSlice({
           id: newItem.id,
           name: newItem.name,
           img: newItem.img,
-          newPrice: newItem.newPrice,
+          newPrice: Number(newItem.newPrice),
           quantity: 1,
-          totalPrice: newItem.newPrice,
+          totalPrice: Number(newItem.newPrice),
         });
       }
       else{
+      state.totalCartPrice = 
+
             existingItems.quantity++;
             existingItems.totalPrice = Number(existingItems.totalPrice) + Number(existingItems.totalPrice)
       }
 
       setCartInfo(state.cartItems, state.counter);
     },
+
+    removeItem: (state, action) => {
+      const existingItems = state.cartItems.find(eachItem => eachItem.id === action.payload)
+      state.cartItems = state.cartItems.filter(eachItem => eachItem.id !== action.payload);
+      state.counter = state.counter - existingItems.quantity
+
+      setCartInfo(state.cartItems, state.counter);
+
+    },
+
+    clearAllItems: (state, action) => {
+      state.cartItems = [];
+      state.counter = 0;
+
+      setCartInfo(state.cartItems, state.counter)
+    }
   },
 });
 

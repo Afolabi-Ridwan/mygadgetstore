@@ -10,7 +10,6 @@ import {store} from "./redux/cartSlice/cartReducer";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
-
 root.render(
   <Provider store={store}>
     <React.StrictMode>
