@@ -9,33 +9,25 @@ import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import firstImage from "./images/1679220140028test";
 import "./navbar.css";
 import { Link } from "react-router-dom";
-import { useState, useContext, useEffect } from "react";
-import { Context } from "../../../redux/cartStore/storeContext";
-import { useRef } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 
 function Navbar(props) {
   const [state, updateState] = useState(false);
+
   const dropdownHandler = () => {
     updateState((prev) => !prev);
   };
 
-  // const { counter } = useContext(Context);
-  // console.log(cartItems);
+  const [input, setInput] = useState("");
 
-  const {cartItems,counter} = {cartItems: useSelector((state) => (state.cart.cartItems)), counter: useSelector((state) => (state.cart.counter))}
-  // const cartItems = useSelector((state) => ( state.cart.cartItems));
-
-  // const cartItems = useSelector((state) => state.cart.cartItems);
-  // const counter = useSelector((state) => state.cart.counter);
-  console.log(cartItems, counter);
+  const changeHandler = (event) => {
+    setInput(event.target.value);
+  };
 
 
-  // const resultModalHandler = () => {
-  //   setTimer(true)
-  //   console.log("clicked")
-  //   dialog.current.showModal();
-  // }
+
+  const counter = useSelector((state) => state.cart.counter);
 
   return (
     <div>
@@ -55,8 +47,14 @@ function Navbar(props) {
         <div>
           <form>
             <div className="form">
-              <input type="text" placeholder="search here" />
+              <input
+                type="text"
+                onChange={changeHandler}
+                placeholder="search here"
+              />
+              <Link    to={`/searchPage/${input}`}>
               <button> Search </button>
+              </Link>
             </div>
           </form>
         </div>

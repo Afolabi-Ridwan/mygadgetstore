@@ -67,10 +67,9 @@ function SignIn() {
                   <input
                     style={{ marginRight: "5px" }}
                     type="checkbox"
-                    id="rememberMe"
                     onChange={(event) => event.target.value}
                   />
-                  <label htmlFor="rememberMe" style={{ color: "white" }}>
+                  <label htmlFor="rememberMe" id={styles.rememberMe} style={{ color: "white" }}>
                     Remember Me{" "}
                   </label>
                 </div>

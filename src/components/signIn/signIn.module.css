@@ -151,6 +151,8 @@ label {
   }
 
   .forgotPassword{
+    display: flex;
+    align-items: center;
     font-size: 14px;
   }
   

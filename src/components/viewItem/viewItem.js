@@ -1,14 +1,12 @@
 import { useParams } from "react-router-dom";
 import { product } from "../data/data";
 import "./viewItem.css";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { useRef } from "react";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useContext } from "react";
-import { Context } from "../../redux/cartStore/storeContext";
 import { useDispatch } from "react-redux";
 import { CartActions } from "../../redux/cartSlice/cartSlice";
 

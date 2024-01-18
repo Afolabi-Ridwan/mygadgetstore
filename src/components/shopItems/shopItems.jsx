@@ -1,7 +1,5 @@
 import "./shopItems.css";
 import { products } from "../data/products";
-import Navbar from "../homepage/navbar/navbar";
-import Menu from "../homepage/menus/menu";
 import { useState } from "react";
 import {Link} from "react-router-dom"
 // import Footer from "../homepage/Footer/Footer";
@@ -21,15 +19,7 @@ function ShopItems(props) {
     { category: speakers, itemName: "Speakers", button: "See All" },
   ];
 
-  const [state, updateState] = useState(false);
 
-  function onDisplayMenu() {
-    updateState(true);
-  }
-
-  const onRemoveMenuHandler = () => {
-    updateState(false);
-  };
 
   const links = [
     { id: "Cellphones", value: "/cellphoneSession" },

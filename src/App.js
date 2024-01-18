@@ -6,7 +6,7 @@ import PhoneSession from "./components/sessions/phoneSession/phoneSession";
 import TVSession from "./components/sessions/tvSession/tvSession";
 import SpeakerSession from "./components/sessions/speakerSession/speakerSession";
 import GamingSession from "./components/sessions/gamingSession/gamingSession";
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ViewItem from "./components/viewItem/viewItem";
 import ShopItems from "./components/shopItems/shopItems";
 import Navbar from "./components/homepage/navbar/navbar";
@@ -14,10 +14,9 @@ import Menu from "./components/homepage/menus/menu";
 import { useState } from "react";
 import Footer from "./components/homepage/Footer/Footer";
 import { useLocation } from "react-router-dom";
-import CartStore from "./redux/cartStore/cartStore";
-import { Context } from "./redux/cartStore/storeContext";
 import ResultModal from "./ResultModal/ResultModal";
 import CheckOut from "./CheckOut/checkOut";
+import SearchPage from "./components/searchPage/searchPage";
 
 function App() {
   const [state, updateState] = useState(false);
@@ -53,6 +52,8 @@ function App() {
           <Route path="/shopItems" element={<ShopItems />} />
           <Route path="/resultModal" element={<ResultModal />} />
           <Route path="/checkOut" element={<CheckOut/>} />
+          <Route path="/searchPage/:searchInput" element={<SearchPage />} />
+
           
         </Routes>
 
