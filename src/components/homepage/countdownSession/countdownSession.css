@@ -64,3 +64,10 @@
     height: 300px;
   }
 }
+
+@media (max-height: 700px) {
+  .countdownSession .image {
+    height: 400px;
+    padding: 20px 0;
+  }
+}
