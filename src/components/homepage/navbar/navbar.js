@@ -28,6 +28,9 @@ function Navbar(props) {
 
 
   const counter = useSelector((state) => state.cart.counter);
+  const wishListCounter = useSelector(state => state.cart.wishListCounter);
+  const wishList = useSelector(state => state.cart.wishList);
+  console.log(wishList)
 
   return (
     <div>
@@ -61,8 +64,10 @@ function Navbar(props) {
 
         <div className="icons">
           <div className="heartIconTab">
+            <Link className="linkTag" to={"/wishList"}>
             <FontAwesomeIcon className="heart" icon={faHeart} />
-            <p className={` cartNo ${counter > 0 && "cartAdded"}`}> 1</p>
+            <p className={` cartNo ${wishListCounter >= 0 && "cartAdded"}`}> {wishListCounter}</p>
+            </Link>
           </div>
           <div className="cartIconTab">
             <Link to="/resultModal" className="linkTag">
@@ -111,6 +116,3 @@ function Navbar(props) {
 
 export default Navbar;
 
-// const cartItem = useSelector(state => state.cart)
-
-// console.log(cartItem)

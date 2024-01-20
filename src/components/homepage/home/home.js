@@ -14,21 +14,10 @@ import { useState } from "react";
 
 function Home() {
 
-  // const [state, updateState] = useState(false);
-
   
-  // function onDisplayMenu() {
-  //   updateState(true);
-  // }
-
-  // const onRemoveMenuHandler = () => {
-  //   updateState(false);
-  // };
 
   return (
     <div>
-      {/* <Navbar displayMenu={onDisplayMenu}/>
-      <Menu stateHandler={state} removeMenuHandler={onRemoveMenuHandler}/> */}
       <DesktopMenu />
       <FirstSession />
       <Marquee pauseOnHover={true} gradientColor="none">
@@ -44,7 +33,6 @@ function Home() {
 
       <Newsletter/>
 
-      {/* <Footer/> */}
 
     </div>
   );

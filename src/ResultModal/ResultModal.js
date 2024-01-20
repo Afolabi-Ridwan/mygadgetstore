@@ -1,8 +1,4 @@
-// import { Context } from "../redux/cartStore/storeContext";
-// import { useContext } from "react";
 import style from "styled-components";
-// import { forwardRef } from "react";
-// import vid from "../../public/assets/video/smartphone.mp4"
 import { useSelector } from "react-redux";
 import { FaTrash } from "react-icons/fa";
 import { CartActions } from "../redux/cartSlice/cartSlice";
@@ -155,7 +151,6 @@ const ClearAllButton = style.button`
 `;
 
 function ResultModal() {
-  // const { cartItems, counter } = useContext(Context);
   const { cartItems, counter } = {
     cartItems: useSelector((state) => state.cart.cartItems),
     counter: useSelector((state) => state.cart.counter),

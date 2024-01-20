@@ -1,5 +1,4 @@
 import React from "react";
-// import Marquee from "react-fast-marquee";
 import "./icons.css";
 
 import firstImage from "../images/shipping-truck.svg";

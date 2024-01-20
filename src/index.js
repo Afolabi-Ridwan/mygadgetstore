@@ -5,7 +5,7 @@ import App from "./App";
 import { ToastContainer } from "react-toastify";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import CartStore from "./redux/cartStore/cartStore";
+import CartStore from "./redux/cartStoreNOTUSED/cartStore";
 import {store} from "./redux/cartSlice/cartReducer";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

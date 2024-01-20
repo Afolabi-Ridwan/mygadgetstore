@@ -10,6 +10,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { useDispatch } from "react-redux";
 import { CartActions } from "../../redux/cartSlice/cartSlice";
 
+
+
 function ViewItem(props) {
   const { id, getItemName } = useParams();
 
@@ -38,7 +40,6 @@ function ViewItem(props) {
     console.log(message.current.value);
   }
 
-  //  const {cartAmountDispatch} = useContext(Context)
   const dispatch = useDispatch();
 
   function addToCart(itemAdded) {
@@ -52,6 +53,31 @@ function ViewItem(props) {
       })
     );
   }
+
+  
+  const [messageState, setMessageState] = useState("") 
+  const [nameInputState, setNameInputState] = useState("") 
+
+  const submitHandler = () => {
+    if (messageState.length < 1){
+      alert("Message Input empty, Please make an input!")
+    }
+    else if (nameInputState.length < 1){
+      alert("Name Input empty, Please make an input!")
+    }else{
+      toast.success("Thanks for sending a review!!!");
+    }
+  }
+
+
+  const nameInputHandler = (event) => {
+    setNameInputState(event.target.value)
+  }
+  
+  const messageHandler = (event) => {
+    setMessageState(event.target.value)
+  }
+
 
   return (
     <div className="viewItem">
@@ -126,7 +152,7 @@ function ViewItem(props) {
 
                   <h4> Tell us about your experience</h4>
                   <form onSubmit={submit}>
-                    <input placeholder="Enter name" required />
+                    <input placeholder="Enter name" required onChange={nameInputHandler}/>
 
                     <div className="stars">
                       <div>
@@ -155,8 +181,9 @@ function ViewItem(props) {
                       placeholder="Review Message"
                       required
                       ref={message}
+                      onChange={messageHandler}
                     />
-                    <button> Submit </button>
+                    <button onClick={submitHandler}> Submit </button>
                   </form>
                 </div>
               )}

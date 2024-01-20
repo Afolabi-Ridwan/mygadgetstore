@@ -1,0 +1,96 @@
+  
+  .wishList .header {
+    font-size: 35px;
+    color: white;
+    text-transform: capitalize;
+    margin-top: 30px;
+  }
+  
+  .wishList .container .eachTab .infoOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .wishList .container .infoOne img {
+    width: 80%;
+    height: 300px;
+    object-fit: contain;
+    transition: ease 0.5s;
+    margin-bottom: 50px;
+  }
+  
+  .wishList .container .infoOne img:hover {
+    width: 85%;
+    height: 310px;
+  }
+  
+  .wishList .container .eachTab .infoTwo {
+    position: absolute;
+    margin-top: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .wishList .container {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .wishList .container .eachTab {
+    background-color: rgb(48, 59, 55);
+    /* background-color: rgb(48, 126, 108, 0.4); */
+    width: 100%;
+    height: 500px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .wishList .container .eachTab .name {
+    color: white;
+    font-size: 23px;
+  }
+
+  
+  .wishList .container .eachTab .prices {
+    display: flex;
+    align-items: baseline;
+    margin-top: 40px;
+  }
+  
+  .wishList .container .eachTab .prices .newItemPrice {
+    color: var(--deepGreen);
+  }
+
+  
+
+  
+  @media (max-width: 1250px) {
+    .wishList .container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .wishList .container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 818px) {
+    .wishList .container {
+      grid-template-columns: 1fr;
+    }
+  
+    .wishList .header {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+  

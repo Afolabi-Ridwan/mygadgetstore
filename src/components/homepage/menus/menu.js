@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function Menu(props) {
-  // const [menuState, setMenuState] = useState(false);
 
   const closeMenuHandler = () => {
     return props.removeMenuHandler();

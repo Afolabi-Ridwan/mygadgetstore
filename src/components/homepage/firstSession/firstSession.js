@@ -1,10 +1,8 @@
-// import { useState } from "react";
 import { products } from "../../data/products";
 import "./firstSession.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-// import Icons from "../icons/icons";
 
 function FirstSession() {
   const cellphones =

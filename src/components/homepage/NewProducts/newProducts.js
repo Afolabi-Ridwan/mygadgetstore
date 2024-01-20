@@ -95,6 +95,23 @@ function NewProducts() {
     );
   }
 
+  const addToWishlistHanlder = (itemAdded) => {
+
+    toast.success("Added to WishLists!!!");
+
+    dispatch(
+      CartActions.addToWishlistHanlder(
+        {
+          id: itemAdded.id,
+          name: itemAdded.itemInfo.name,
+          img: itemAdded.itemInfo.itemImg[0],
+          newPrice: itemAdded.itemInfo.newItemPrice,
+          category: itemAdded.itemInfo.category,
+        }
+      )
+    )
+  }
+
   return (
     <div id="newProducts">
       <div className="header">
@@ -142,11 +159,11 @@ function NewProducts() {
                 <div className="hr"></div>
 
                 <div className="icons">
-                  <div className=" heart">
+                  <div className=" heart" onClick={() => addToWishlistHanlder(eachTab)}>
                     <div className="eachIcon">
                       <IoHeartOutline />
                     </div>
-                    <span className="heartToolTip"> ADD TO WISHLIST </span>
+                    <span className="heartToolTip" > ADD TO WISHLIST </span>
                   </div>
                   <div className="alt">
                     <div className="eachIcon">

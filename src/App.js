@@ -17,7 +17,7 @@ import { useLocation } from "react-router-dom";
 import ResultModal from "./ResultModal/ResultModal";
 import CheckOut from "./CheckOut/checkOut";
 import SearchPage from "./components/searchPage/searchPage";
-
+import WishList from "./wishList/wishList";
 function App() {
   const [state, updateState] = useState(false);
 
@@ -53,6 +53,7 @@ function App() {
           <Route path="/resultModal" element={<ResultModal />} />
           <Route path="/checkOut" element={<CheckOut/>} />
           <Route path="/searchPage/:searchInput" element={<SearchPage />} />
+          <Route path="/wishList" element={<WishList />} />
 
           
         </Routes>
