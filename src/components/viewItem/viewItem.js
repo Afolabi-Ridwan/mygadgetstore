@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { product } from "../data/data";
 import "./viewItem.css";
-import {  useState } from "react";
+import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { useRef } from "react";
 
@@ -9,8 +9,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch } from "react-redux";
 import { CartActions } from "../../redux/cartSlice/cartSlice";
-
-
+import { Link } from "react-router-dom";
 
 function ViewItem(props) {
   const { id, getItemName } = useParams();
@@ -45,7 +44,8 @@ function ViewItem(props) {
   function addToCart(itemAdded) {
     toast.success("Added to Cart!!!");
 
-    dispatch( CartActions.addItem({
+    dispatch(
+      CartActions.addItem({
         id: itemAdded.id,
         name: itemAdded.itemInfo.name,
         img: itemAdded.itemInfo.itemImg[0],
@@ -54,30 +54,26 @@ function ViewItem(props) {
     );
   }
 
-  
-  const [messageState, setMessageState] = useState("") 
-  const [nameInputState, setNameInputState] = useState("") 
+  const [messageState, setMessageState] = useState("");
+  const [nameInputState, setNameInputState] = useState("");
 
   const submitHandler = () => {
-    if (messageState.length < 1){
-      alert("Message Input empty, Please make an input!")
-    }
-    else if (nameInputState.length < 1){
-      alert("Name Input empty, Please make an input!")
-    }else{
+    if (messageState.length < 1) {
+      alert("Message Input empty, Please make an input!");
+    } else if (nameInputState.length < 1) {
+      alert("Name Input empty, Please make an input!");
+    } else {
       toast.success("Thanks for sending a review!!!");
     }
-  }
-
+  };
 
   const nameInputHandler = (event) => {
-    setNameInputState(event.target.value)
-  }
-  
-  const messageHandler = (event) => {
-    setMessageState(event.target.value)
-  }
+    setNameInputState(event.target.value);
+  };
 
+  const messageHandler = (event) => {
+    setMessageState(event.target.value);
+  };
 
   return (
     <div className="viewItem">
@@ -108,7 +104,11 @@ function ViewItem(props) {
                   </div>
 
                   <div className="buyBtnContainer">
-                    <button className="buyBtn">Buy Now</button>
+                    <Link to={"/checkOut"} className="linkTag">
+                      {" "}
+                      <button className="buyBtn">Buy Now</button>
+                    </Link>
+
                     <div id="filler"> </div>
                   </div>
                 </div>
@@ -152,7 +152,11 @@ function ViewItem(props) {
 
                   <h4> Tell us about your experience</h4>
                   <form onSubmit={submit}>
-                    <input placeholder="Enter name" required onChange={nameInputHandler}/>
+                    <input
+                      placeholder="Enter name"
+                      required
+                      onChange={nameInputHandler}
+                    />
 
                     <div className="stars">
                       <div>
@@ -242,4 +246,3 @@ function ViewItem(props) {
 }
 
 export default ViewItem;
-
