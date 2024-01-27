@@ -106,6 +106,11 @@ const FlexDiv = style.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+
+  @media(max-width: 818px){
+  margin-bottom: 20px;
+    
+  }
 `;
 
 const ButtonCont = style.div`
@@ -274,7 +279,10 @@ function ResultModal() {
 
             <ButtonCont>
               <Link to={"/checkOut"} className="linkTag"> <Button> Check Out</Button></Link>
+              <Link className=" linkTag"  to={"/home"}>
               <Button>Continue Shopping</Button>
+          </Link>
+
             </ButtonCont>
           </CheckOutTab>
         </CheckOutTabContainer>
