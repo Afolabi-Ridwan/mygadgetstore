@@ -70,7 +70,9 @@ const Modal = ({ inputs }) => {
         </button>
         </Link>
 
-        <button className="continueBtn"> Continue</button>
+          <Link className="continueBtn linkTag"  to={"/home"}>
+        <button > Continue</button>
+          </Link>
       </div>
     </div>
   );

@@ -1,120 +1,122 @@
-
-.container{
-    padding: 0 20px;
-    color: white;
-
+.container {
+  padding: 0 20px;
+  color: white;
 }
-.header{
-    text-align: center;
-    margin: 30px 0;
-    font-size: 40px;
+.header {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 40px;
 }
-.userDetails p{
-    margin-top: 15px;
-    font-weight: 300;
-    font-size: 17px;
+.userDetails p {
+  margin-top: 15px;
+  font-weight: 300;
+  font-size: 17px;
 }
 
-.details h1:first-of-type{
-    margin: 40px 0 20px 0;
+.details h1:first-of-type {
+  margin: 40px 0 20px 0;
 }
 
-.eachItem{
-    display: flex;
-    align-items: center;
-    background-color: rgb(43, 153, 109, 0.3);
+.eachItem {
+  display: flex;
+  align-items: center;
+  background-color: rgb(43, 153, 109, 0.3);
+  margin-top: 20px;
+  padding: 20px 30px;
+  justify-content: space-between;
+}
+
+.eachItem .name {
+  width: 100px;
+  text-align: center;
+}
+
+.eachItem img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.calcTab {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.calcTab span:first-of-type {
+  font-size: 18px;
+}
+
+.calcTab span:last-of-type {
+  font-size: 22px;
+  font-weight: bold;
+}
+.totalTab span:first-of-type {
+  font-size: 27px;
+}
+.totalTab span:last-of-type {
+  font-size: 29px;
+}
+
+hr {
+  margin: 30px 0;
+}
+.buttonTab {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.backBtn {
+  width: 30%;
+  padding: 10px 0;
+  background: transparent;
+  border: 2px solid var(--lemon);
+  text-align: center;
+}
+
+.backBtn button {
+  background: none;
+  border: none;
+  color: var(--lemon);
+  font-size: 16px;
+}
+
+.continueBtn {
+  width: 68%;
+  padding: 10px 0;
+  background-color: var(--lemon);
+
+  text-align: center;
+}
+
+.continueBtn button {
+  border: none;
+  color: white;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+@media (max-width: 818px) {
+  .buttonTab {
+    flex-direction: column;
+  }
+
+  .backBtn {
+    width: 100%;
+  }
+
+  .continueBtn {
+    width: 100%;
     margin-top: 20px;
-    padding: 20px 30px;
-    justify-content: space-between;
-}
+  }
 
-.eachItem .name{
-    width: 100px;
+  .header {
     text-align: center;
-}
-
-.eachItem img{
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
-.calcTab{
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.calcTab span:first-of-type{
-    font-size: 18px;
-}
-
-.calcTab span:last-of-type{
-    font-size: 22px;
-    font-weight: bold;
-}
-.totalTab span:first-of-type{
-    font-size: 27px;
-}
-.totalTab span:last-of-type{
-    font-size: 29px;
-}
-
-hr{
     margin: 30px 0;
-}
-.buttonTab{
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 0;
-}
-.backBtn{
-    width: 30%;
-    padding: 10px 0;
-    background: transparent;
-    border: 2px solid var(--lemon);
-    text-align: center;
-}
-
-.backBtn button{
-    background: none;
-    border: none;
-    color: var(--lemon);
-    font-size: 16px;
-}
-
-.continueBtn{
-    width: 68%;
-    padding: 10px 0;
-    background-color: var(--lemon);
-    border: none;
-    font-size: 16px;
-    color: white;
-}
-
-@media (max-width: 818px){
-    .buttonTab{
-        flex-direction: column;
-
-    }
-
-    .backBtn{
-        width: 100%;
-    }
-    
-    .continueBtn{
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .header{
-        text-align: center;
-        margin: 30px 0;
-        font-size: 30px;
-    }
-    .userDetails h2{
-        font-size: 20px;
-    }
-
+    font-size: 30px;
+  }
+  .userDetails h2 {
+    font-size: 20px;
+  }
 }
